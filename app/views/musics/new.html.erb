@@ -1,0 +1,40 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= form_tag("/musics/create") do %>
+  <div class="form">
+    <div class="form-body">
+      <p>title</p>
+        <textarea name="title"></textarea>
+      <p>artist</p>
+        <textarea name="artist"></textarea>
+      <p>emotion</p>
+      <select name="emotion">
+        <option>hiTension</option>
+        <option>confused</option>
+        <option>motivated</option>
+        <option>giveup</option>
+        <option>happy</option>
+        <option>sad</option>
+        <option>goodMorning</option>
+        <option>badMorning</option>
+        <option>goodDay</option>
+        <option>badDay</option>
+        <option>goodEvening</option>
+        <option>badEvening</option>
+        <option>goodNight</option>
+        <option>badNight</option>
+      </select>
+      <p>youTube</p>
+        <textarea name="youTube"></textarea>
+      <p>appleMusic</p>
+        <textarea name="appleMusic"></textarea>
+      <p>spotify</p>
+        <textarea name="spotify"></textarea>
+      <p>rylic</p>
+        <textarea name="rylic"></textarea>
+      <input type="submit" value="投稿">
+    </div>
+  </div>
+<% end %>
