@@ -9,6 +9,22 @@ class MusicsController < ApplicationController
     @music = Music.find_by(id: params[:id])
   end
 
+  def update
+    @music = Music.find_by(id: params[:id])
+    @music.title = params[:title]
+    @music.artist = params[:artist]
+    @music.emotion = params[:emotion]
+    @music.youTube = params[:youTube]
+    @music.appleMusic = params[:appleMusic]
+    @music.spotify = params[:spotify]
+    @music.rylic = params[:rylic]
+    if @music.save
+      redirect_to("/musics/index")
+    else
+      render("musics/edit")
+    end
+  end
+
   def top
   end
 

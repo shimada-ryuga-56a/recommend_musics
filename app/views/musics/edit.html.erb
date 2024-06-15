@@ -12,16 +12,31 @@
           <div>
           <p>曲名</p>
             <textarea name="title"><%= @music.title %></textarea>
-            </div>
+          </div>
           <div>
             <p>アーティスト</p>
             <textarea name="artist"><%= @music.artist %></textarea>
           </div>
-          <textarea name="emotion"><%= @music.emotion %></textarea>
-          <textarea name="youTube"><%= @music.youTube %></textarea>
-          <textarea name="appleMusic"><%= @music.appleMusic %></textarea>
-          <textarea name="spotify"><%= @music.spotify %></textarea>
-          <textarea name="rylic"><%= @music.rylic %></textarea>
+          <div>
+            <p>感情</p>
+            <textarea name="emotion"><%= @music.emotion %></textarea>
+          </div>
+          <div>
+            <p>YouTube</p>
+            <textarea name="youTube"><%= @music.youTube %></textarea>
+          </div>
+          <div>
+            <p>AppleMusic</p>
+            <textarea name="appleMusic"><%= @music.appleMusic %></textarea>
+          </div>
+          <div>
+            <p>Spotify</p>
+            <textarea name="spotify"><%= @music.spotify %></textarea>
+          </div>
+          <div>
+            <p>Rylic</p>
+            <textarea name="rylic"><%= @music.rylic %></textarea>
+          </div>
           <input type="submit" value="保存">
         </div>
       </div>
