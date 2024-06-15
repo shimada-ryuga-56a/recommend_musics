@@ -1,0 +1,10 @@
+<div class="main posts-index">
+  <div class="container">
+    <% @musics.each do |music| %>
+      <div class="posts-index-item">
+        <%= link_to(music.title, "/musics/#{music.id}/edit") %>
+        <%= link_to(music.emotion, "/musics/#{music.id}/edit") %>
+      </div>
+    <% end %>
+  </div>
+</div>

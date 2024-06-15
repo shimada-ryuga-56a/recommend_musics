@@ -1,0 +1,30 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    <%= form_tag("/musics/#{@music.id}/update") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @music.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <div>
+          <p>曲名</p>
+            <textarea name="title"><%= @music.title %></textarea>
+            </div>
+          <div>
+            <p>アーティスト</p>
+            <textarea name="artist"><%= @music.artist %></textarea>
+          </div>
+          <textarea name="emotion"><%= @music.emotion %></textarea>
+          <textarea name="youTube"><%= @music.youTube %></textarea>
+          <textarea name="appleMusic"><%= @music.appleMusic %></textarea>
+          <textarea name="spotify"><%= @music.spotify %></textarea>
+          <textarea name="rylic"><%= @music.rylic %></textarea>
+          <input type="submit" value="保存">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

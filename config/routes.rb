@@ -1,22 +1,30 @@
 Rails.application.routes.draw do
   root 'musics#top'
-  get 'recommend' => "musics#recommend"
-  get 'recommend/happy' => "musics#happy"
-  get 'recommend/badDay' => "musics#badDay"
-  get 'recommend/sad' => "musics#sad"
-  get 'recommend/badMorning' => "musics#badMorning"
-  get 'recommend/confused' => "musics#confused"
-  get 'recommend/goodDay' => "musics#goodDay"
-  get 'recommend/goodEvening' => "musics#goodEvening"
-  get 'recommend/giveup' => "musics#giveup"
-  get 'recommend/goodMorning' => "musics#goodMorning"
-  get 'recommend/goodNight' => "musics#goodNight"
-  get 'recommend/badNight' => "musics#badNight"
-  get 'recommend/badEvening' => "musics#badEvening"
-  get 'recommend/motivated' => "musics#motivated"
-  get 'recommend/hiTension' => "musics#hiTension"
+  get 'login', to: 'user_sessions#new'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
+
+  get 'recommend' => "recommends#recommend"
+  get 'recommend/happy' => "recommends#happy"
+  get 'recommend/badDay' => "recommends#badDay"
+  get 'recommend/sad' => "recommends#sad"
+  get 'recommend/badMorning' => "recommends#badMorning"
+  get 'recommend/confused' => "recommends#confused"
+  get 'recommend/goodDay' => "recommends#goodDay"
+  get 'recommend/goodEvening' => "recommends#goodEvening"
+  get 'recommend/giveup' => "recommends#giveup"
+  get 'recommend/goodMorning' => "recommends#goodMorning"
+  get 'recommend/goodNight' => "recommends#goodNight"
+  get 'recommend/badNight' => "recommends#badNight"
+  get 'recommend/badEvening' => "recommends#badEvening"
+  get 'recommend/motivated' => "recommends#motivated"
+  get 'recommend/hiTension' => "recommends#hiTension"
+
   get "musics/new" => "musics#new"
   post "musics/create" => "musics#create"
+  get "musics/index" => "musics#index"
+  get "musics/:id/edit" => "musics#edit"
+  post "musics/:id/update" => "musics#update"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
