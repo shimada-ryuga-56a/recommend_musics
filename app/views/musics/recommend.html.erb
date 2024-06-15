@@ -1,6 +1,21 @@
 <h1><%= @genre %>ならこれを聞けっっっ！！！！</h1>
   <div>
-    <%= @music %>
+    <%= @music.title %>
+  </div>
+  <div>
+    <%= @music.artist %>
+  </div>
+  <div>
+    <%= @music.rylic %>
+  </div>
+  <div>
+    <%= raw @music.youTube %>
+  </div>
+  <div>
+    <%= raw @music.appleMusic %>
+  </div>
+  <div>
+    <%= raw @music.spotify %>
   </div>
 <button class="nav__toggle" aria-expanded="false" type="button">
 <a href="/">別の曲を教えろよっっっ！！！！！</a>
