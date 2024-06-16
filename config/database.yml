@@ -79,6 +79,8 @@ test:
 #
 production:
   <<: *default
+  # database: recommend_music_production
   database: recommend_musics
+  # username: recommend_music
   username: recommend_musics_user
   password: <%= ENV["RECOMMEND_MUSIC_DATABASE_PASSWORD"] %>
