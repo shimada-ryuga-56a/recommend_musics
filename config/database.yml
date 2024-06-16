@@ -83,4 +83,4 @@ production:
   database: recommend_musics
   # username: recommend_music
   username: recommend_musics_user
-  password: <%= ENV["RECOMMEND_MUSIC_DATABASE_PASSWORD"] %>
+  password: <%= ENV["RECOMMEND_MUSICS_DATABASE_PASSWORD"] %>
