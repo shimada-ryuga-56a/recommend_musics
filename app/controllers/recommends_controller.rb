@@ -88,7 +88,7 @@ class RecommendsController < ApplicationController
   def goodEvening
     music = Music.where(emotion: 'goodEvening').order(Arel.sql('RANDOM()')).first    
     session[:music] = {
-      # title: music.title,
+      title: music.title,
       artist: music.artist,
       rylic: music.rylic,
       appleMusic: music.appleMusic,
