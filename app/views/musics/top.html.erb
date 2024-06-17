@@ -1,5 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラフルなpタグ</title>
+    <style>
+    @keyframes rainbow {
+        0% { color: red; }
+        14% { color: orange; }
+        28% { color: yellow; }
+        42% { color: green; }
+        57% { color: blue; }
+        71% { color: indigo; }
+        85% { color: violet; }
+        100% { color: red; }
+    }
+
+    @keyframes wave {
+        0%, 100% { transform: translateY(0); }
+        25% { transform: translateY(-10px); }
+        75% { transform: translateY(10px); }
+    }
+
+    .rainbow-text {
+        font-family: 'Comic Sans MS', cursive;
+        font-size: 24px;
+        font-weight: bold;
+        display: inline-block;
+        animation: rainbow 3s infinite, wave 1s infinite;
+    }
+</style>
+</head>
+
+<body>
 <h1>ならこれを聞けっっっ！！！！</h1>
-<p>※CSSはあまりにも間に合いませんでした</p>
+<div>
+  <p class="rainbow-text">※CSSはあまりにも間に合いませんでした♡</p>
+</div>
+
 <%# 
 <button class="nav__toggle" aria-expanded="false" type="button">
   <a href="/recommend/hiTension">テンションを上げたい</a>
@@ -62,3 +98,5 @@
 
 %>
 
+</body>
+</html>
